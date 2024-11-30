@@ -1,0 +1,144 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="#F5F5F5">
+
+    <!-- Título de la canción -->
+    <TextView
+        android:id="@+id/songTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:text="Título de la Canción"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="#000" />
+
+    <!-- Tiempo transcurrido -->
+    <TextView
+        android:id="@+id/tvCurrentTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/songTitle"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="20dp"
+        android:text="0:00"
+        android:textSize="14sp"
+        android:textColor="#000" />
+
+    <!-- Duración total -->
+    <TextView
+        android:id="@+id/tvTotalDuration"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/songTitle"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="20dp"
+        android:text="3:26"
+        android:textSize="14sp"
+        android:textColor="#000" />
+
+    <!-- Barra de progreso -->
+    <SeekBar
+        android:id="@+id/seekBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/songTitle"
+        android:layout_marginStart="48dp"
+        android:layout_marginEnd="48dp"
+        android:layout_marginTop="20dp" />
+
+    <!-- Botones de control -->
+    <LinearLayout
+        android:id="@+id/controlButtons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/seekBar"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <!-- Botón Anterior -->
+        <Button
+            android:id="@+id/btnPrevious"
+            android:layout_width="0dp"
+            android:layout_height="180dp"
+            android:layout_weight="1"
+            android:backgroundTint="#6200EE"
+            android:text="Anterior"
+            android:textColor="#FFFFFF"
+            android:textSize="12sp" />
+
+        <!-- Botón Rebobinar -->
+        <Button
+            android:id="@+id/btnRewind"
+            android:layout_width="0dp"
+            android:layout_height="180dp"
+            android:layout_weight="1"
+            android:backgroundTint="#6200EE"
+            android:text="Reb. 10 seg"
+            android:textColor="#FFFFFF"
+            android:textSize="10sp" />
+
+        <!-- Botón Play/Pause -->
+        <Button
+            android:id="@+id/btnPlayPause"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:layout_marginHorizontal="8dp"
+            android:backgroundTint="#03DAC5"
+            android:text="Play"
+            android:textColor="#FFFFFF"
+            android:textSize="14sp" />
+
+        <!-- Botón Stop -->
+        <Button
+            android:id="@+id/btnStop"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:layout_marginHorizontal="8dp"
+            android:backgroundTint="#B00020"
+            android:text="Stop"
+            android:textColor="#FFFFFF"
+            android:textSize="14sp" />
+
+        <!-- Botón Adelantar -->
+        <Button
+            android:id="@+id/btnForward"
+            android:layout_width="0dp"
+            android:layout_height="180dp"
+            android:layout_weight="1"
+            android:backgroundTint="#6200EE"
+            android:text="Adel. 10 seg"
+            android:textColor="#FFFFFF"
+            android:textSize="10sp" />
+
+        <!-- Botón Siguiente -->
+        <Button
+            android:id="@+id/btnNext"
+            android:layout_width="0dp"
+            android:layout_height="180dp"
+            android:layout_weight="1"
+            android:backgroundTint="#6200EE"
+            android:text="Siguiente"
+            android:textColor="#FFFFFF"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+    <!-- Botón para volver a la lista -->
+    <Button
+        android:id="@+id/btnBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"
+        android:backgroundTint="#6200EE"
+        android:text="Volver a la Lista"
+        android:textColor="#FFFFFF"
+        android:textSize="14sp" />
+</RelativeLayout>
